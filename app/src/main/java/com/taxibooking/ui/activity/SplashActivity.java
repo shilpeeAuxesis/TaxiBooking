@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent mainIntent = new Intent(SplashActivity.this, IntroductionSplashActivity.class);
+                    Intent mainIntent = new Intent(SplashActivity.this, WelcomeActivity.class);
                     startActivity(mainIntent);
                     overridePendingTransition(R.anim.enter, R.anim.exit);
                     finish();
