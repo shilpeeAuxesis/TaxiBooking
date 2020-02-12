@@ -5,10 +5,16 @@
     <color name="colorAccent">#050320</color> <!--For icon color-->
 
     <color name="colorLightGray">#B4B4B4</color>
-
     <color name="colorDarkGray">#050320</color>
+    <color name="colorGray_hint">#AE686B78</color>
 
     <color name="colorWhite">#FFFFFF</color>
     <!--<color name="yellow">#EEC231</color>-->
+    <color name="colorGray_1">#4F4F4F</color>
+    <color name="colorGray_2">#686b78</color>
+
+    <color name="colorGray_3">#E1E1E1</color>
+    <color name="colorGray_4">#dbdbdb</color>
+    <color name="colorGray_5">#E9ECF1</color>
 
 </resources>
