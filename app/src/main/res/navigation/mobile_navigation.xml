@@ -3,41 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_confirm_location">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.taxibooking.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_confirm_location"
+        android:name="com.taxibooking.ui.confirm_location.ConfirmLocationFragment"
+        android:label="@string/menu_confirm_location"
+        tools:layout="@layout/fragment_confirm_location" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.taxibooking.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_choose_destination"
+        android:name="com.taxibooking.ui.choose_destination.ChooseDestinationFragment"
+        android:label="@string/menu__choose_destination"
+        tools:layout="@layout/fragment_choose_destination" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.taxibooking.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_history"
+        android:name="com.taxibooking.ui.history.HistoryFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_history" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.taxibooking.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:id="@+id/nav_rating"
+        android:name="com.taxibooking.ui.rating.RatingFragment"
+        android:label="@string/menu_rating"
+        tools:layout="@layout/fragment_rating" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.taxibooking.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_faq"
+        android:name="com.taxibooking.ui.faq.FAQFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_faq" />
 
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.taxibooking.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
 </navigation>

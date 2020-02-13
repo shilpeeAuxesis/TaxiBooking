@@ -73,7 +73,8 @@ public class WelcomeActivity extends AppCompatActivity {
         btnSkip = findViewById(R.id.btnSkip);
         viewPager = findViewById(R.id.viewPager);
         btnSkip.setOnClickListener(v -> {
-            startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+           // startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+            startActivity(new Intent(WelcomeActivity.this, SignIn.class));
             overridePendingTransition(R.anim.enter, R.anim.exit);
             finish();
         });
@@ -111,7 +112,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 curItem = viewPager.getCurrentItem();
                 if (curItem == lastIdx && state == 1) {
                     lastPageChange = true;
-                    startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                    startActivity(new Intent(WelcomeActivity.this, SignIn.class));
                     overridePendingTransition(R.anim.enter, R.anim.exit);
                     finish();
                 } else {

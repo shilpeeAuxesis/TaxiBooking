@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activity.AfterLoginActivity">
+
+    <ImageView
+        android:id="@+id/ivAppLogo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/car"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHeaderMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Taxify"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/circleImg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAppLogo" />
+
+    <ImageView
+        android:id="@+id/ivPin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:src="@drawable/location_pin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProfessional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Hello, Welcome to Taxify!"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPin" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="Choose your location to start find the \n taxi near you"
+        android:textColor="@color/colorLightGray"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfessional" />
+
+
+    <RelativeLayout
+        android:id="@+id/rLayoutCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/button_ripple_yellow"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage">
+
+        <!--<TextView
+            android:id="@+id/tvNavigationPin"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/navigator_1"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_10sdp" />
+-->
+
+        <ImageView
+            android:id="@+id/tvNavigationPin"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/navigator_1"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvNavigationPin"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="USE CURRENT LOCATION"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvSelectManually"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="SELECT MANUALLY"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rLayoutCurrent" />
+
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/button_ripple_yellow"
+        android:drawableLeft="@drawable/navigator_1"
+        android:drawablePadding="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="left|center"
+        android:padding="5dp"
+        android:text="USE CURRENT LOCATION"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

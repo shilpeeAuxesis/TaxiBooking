@@ -1,4 +1,4 @@
-package com.taxibooking.ui.share;
+package com.taxibooking.ui.history;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.taxibooking.R;
 
-public class ShareFragment extends Fragment {
+public class HistoryFragment extends Fragment {
 
-    private ShareViewModel shareViewModel;
+    private HistoryViewModel slideshowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shareViewModel =
-                ViewModelProviders.of(this).get(ShareViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_share, container, false);
-        final TextView textView = root.findViewById(R.id.text_share);
-        shareViewModel.getText().observe(this, new Observer<String>() {
+        slideshowViewModel =
+                ViewModelProviders.of(this).get(HistoryViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_history, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        slideshowViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

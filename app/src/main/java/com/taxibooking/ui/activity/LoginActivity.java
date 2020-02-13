@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         initUI();
     }
     private void initUI() {
@@ -39,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
         adapter.addFragment(new RegisterFragment(), "Register");
         viewPager.setAdapter(adapter);
     }
-
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();

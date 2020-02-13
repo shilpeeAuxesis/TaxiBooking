@@ -1,16 +1,16 @@
-package com.taxibooking.ui.share;
+package com.taxibooking.ui.confirm_location;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ShareViewModel extends ViewModel {
+public class ConfirmLocationViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ShareViewModel() {
+    public ConfirmLocationViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is share fragment");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {

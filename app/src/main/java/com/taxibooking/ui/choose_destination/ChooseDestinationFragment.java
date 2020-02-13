@@ -1,4 +1,4 @@
-package com.taxibooking.ui.gallery;
+package com.taxibooking.ui.choose_destination;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,14 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.taxibooking.R;
 
-public class GalleryFragment extends Fragment {
+public class ChooseDestinationFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        galleryViewModel = ViewModelProviders.of(this).get(GalleryViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_choose_destination, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
         galleryViewModel.getText().observe(this, new Observer<String>() {
             @Override

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#EEC231</color><!--For Tool bar-->
+    <color name="colorPrimary">#FFD51D</color><!--For Tool bar-->
     <color name="colorPrimaryDark">#b79200</color><!--For Status bar-->
     <color name="colorAccent">#050320</color> <!--For icon color-->
 

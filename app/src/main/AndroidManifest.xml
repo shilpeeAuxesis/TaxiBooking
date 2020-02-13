@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.WelcomeActivity"></activity>
+        <activity android:name=".ui.activity.AfterLoginActivity"></activity>
+        <activity android:name=".ui.activity.SignUpActivity" />
+        <activity android:name=".ui.activity.SignIn" />
+        <activity android:name=".ui.activity.WelcomeActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
         <activity
             android:name=".ui.activity.SplashActivity"

@@ -1,4 +1,4 @@
-package com.taxibooking.ui.tools;
+package com.taxibooking.ui.faq;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.taxibooking.R;
 
-public class ToolsFragment extends Fragment {
+public class FAQFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private FAQViewModel shareViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        shareViewModel =
+                ViewModelProviders.of(this).get(FAQViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_faq, container, false);
+        final TextView textView = root.findViewById(R.id.text_share);
+        shareViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
