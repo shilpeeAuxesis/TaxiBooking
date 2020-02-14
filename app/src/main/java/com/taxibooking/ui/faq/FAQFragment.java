@@ -15,13 +15,13 @@ import androidx.lifecycle.ViewModelProviders;
 import com.taxibooking.R;
 
 public class FAQFragment extends Fragment {
+    private static final String TAG = "FAQFragment";
 
     private FAQViewModel shareViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        shareViewModel =
-                ViewModelProviders.of(this).get(FAQViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
+        shareViewModel = ViewModelProviders.of(this).get(FAQViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_faq, container, false);
         final TextView textView = root.findViewById(R.id.text_share);
         shareViewModel.getText().observe(this, new Observer<String>() {

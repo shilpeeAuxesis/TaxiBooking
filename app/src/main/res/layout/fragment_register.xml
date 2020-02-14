@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
     tools:context=".ui.register.RegisterFragment">
 
@@ -17,90 +17,172 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/_20sdp"
-                android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/edtEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:background="@drawable/custom_bg"
-                    android:fontFamily="@font/roboto"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:paddingLeft="@dimen/_8sdp"
-                    android:singleLine="true"
-                    android:textColor="@color/colorGray_1"
-                    android:textColorHint="@color/colorGray_hint"
-                    android:textSize="@dimen/_12sdp" />
-
-                <EditText
-                    android:id="@+id/edtPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:background="@drawable/custom_bg"
-                    android:fontFamily="@font/roboto"
-                    android:hint="Password"
-                    android:inputType="numberPassword"
-                    android:paddingLeft="@dimen/_8sdp"
-                    android:singleLine="true"
-                    android:textColor="@color/colorGray_1"
-                    android:textColorHint="@color/colorGray_hint"
-                    android:textSize="@dimen/_12sdp" />
-
-                <Button
-                    android:id="@+id/btnRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:background="@drawable/button_ripple_black"
-                    android:fontFamily="@font/roboto_bold"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="SIGN IN"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/_12sdp" />
+                android:layout_height="match_parent">
 
                 <RelativeLayout
-                    android:visibility="gone"
-                    android:id="@+id/rLayoutRegister"
+                    android:id="@+id/rLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:gravity="center"
-                    android:padding="5dp">
+                    android:background="@color/colorWhite"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivAppLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:backgroundTint="@color/colorWhite"
+                        android:src="@drawable/car" />
 
                     <TextView
-                        android:id="@+id/txtViewAcc"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/tvHeaderMessage"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto"
-                        android:text="New to Taxify?"
+                        android:layout_below="@+id/ivAppLogo"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="Taxify"
+                        android:textAllCaps="true"
                         android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/_11sdp" />
+                        android:textSize="@dimen/_20sdp" />
 
-                    <TextView
-                        android:id="@+id/txtRegister"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/txtViewAcc"
-                        android:fontFamily="@font/roboto_medium"
-                        android:paddingLeft="5dp"
-                        android:singleLine="true"
-                        android:text="Signup now"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/_11sdp" />
+                    <ImageView
+                        android:id="@+id/ivImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_below="@+id/tvHeaderMessage"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/booking" />
 
                 </RelativeLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rLayout"
+                    android:background="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+
+                        <EditText
+                            android:id="@+id/edtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/custom_bg"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Name"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray_1"
+                            android:textColorHint="@color/colorGray_hint"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/custom_bg"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray_1"
+                            android:textColorHint="@color/colorGray_hint"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <EditText
+                            android:id="@+id/edtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/custom_bg"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Password"
+                            android:inputType="numberPassword"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray_1"
+                            android:textColorHint="@color/colorGray_hint"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <EditText
+                            android:id="@+id/edtRepeatPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/custom_bg"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Repeat Password"
+                            android:inputType="numberPassword"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray_1"
+                            android:textColorHint="@color/colorGray_hint"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <Button
+                            android:id="@+id/btnLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/button_ripple_black"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="SIGN UP"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/rLayoutSignIn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/txtViewAcc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Already have an account?"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/txtRegister"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/txtViewAcc"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:text="Sign in"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

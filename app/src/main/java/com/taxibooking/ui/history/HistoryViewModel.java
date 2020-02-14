@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class HistoryViewModel extends ViewModel {
-
+    private static final String TAG = "HistoryViewModel";
     private MutableLiveData<String> mText;
 
     public HistoryViewModel() {

@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
-
+public class ChooseDestinationViewModel extends ViewModel {
+    private static final String TAG = "ChooseDestinationViewMo";
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public ChooseDestinationViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is gallery fragment");
     }
@@ -16,4 +16,6 @@ public class GalleryViewModel extends ViewModel {
     public LiveData<String> getText() {
         return mText;
     }
+
+
 }

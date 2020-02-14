@@ -11,11 +11,9 @@ import android.view.ViewGroup;
 
 import com.taxibooking.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class RegisterFragment extends Fragment {
 
+public class RegisterFragment extends Fragment {
+    private static final String TAG = "RegisterFragment";
 
     public RegisterFragment() {
         // Required empty public constructor

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class FAQViewModel extends ViewModel {
-
+    private static final String TAG = "FAQViewModel";
     private MutableLiveData<String> mText;
 
     public FAQViewModel() {

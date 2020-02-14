@@ -74,7 +74,8 @@ public class WelcomeActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         btnSkip.setOnClickListener(v -> {
            // startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
-            startActivity(new Intent(WelcomeActivity.this, SignIn.class));
+            //startActivity(new Intent(WelcomeActivity.this, SignIn.class));
+            startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
             overridePendingTransition(R.anim.enter, R.anim.exit);
             finish();
         });
@@ -110,15 +111,15 @@ public class WelcomeActivity extends AppCompatActivity {
                 // Log.d(TAG, "onPageScrollStateChanged: "+String.valueOf(mAdapter.getCount()-1));
                 lastIdx = mAdapter.getCount() - 1;
                 curItem = viewPager.getCurrentItem();
-                if (curItem == lastIdx && state == 1) {
+               /* if (curItem == lastIdx && state == 1) {
                     lastPageChange = true;
-                    startActivity(new Intent(WelcomeActivity.this, SignIn.class));
+                    startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
                     overridePendingTransition(R.anim.enter, R.anim.exit);
                     finish();
                 } else {
                     lastPageChange = false;
                     Log.d("tag", "page scroll " + lastPageChange);
-                }
+                }*/
 
                /*
                 runOnUiThread(new Runnable() {
