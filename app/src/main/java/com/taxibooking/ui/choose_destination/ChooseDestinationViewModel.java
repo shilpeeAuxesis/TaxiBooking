@@ -10,12 +10,10 @@ public class ChooseDestinationViewModel extends ViewModel {
 
     public ChooseDestinationViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("");
     }
 
-    public LiveData<String> getText() {
+    public LiveData<String> getText(){
         return mText;
     }
-
-
 }

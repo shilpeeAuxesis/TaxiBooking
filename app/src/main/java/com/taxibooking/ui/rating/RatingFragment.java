@@ -14,18 +14,20 @@ import com.taxibooking.R;
 
 public class RatingFragment extends Fragment {
     private static final String TAG = "RatingFragment";
-    private RatingViewModel toolsViewModel;
+    private RatingViewModel ratingViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel = ViewModelProviders.of(this).get(RatingViewModel.class);
+        ratingViewModel = ViewModelProviders.of(this).get(RatingViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_rating, container, false);
         final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        ratingViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
+
         return root;
     }
 }

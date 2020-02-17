@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+
 public class ConfirmLocationViewModel extends ViewModel {
     private static final String TAG = "ConfirmLocationViewMode";
     private MutableLiveData<String> mText;
@@ -16,5 +17,6 @@ public class ConfirmLocationViewModel extends ViewModel {
     public LiveData<String> getText() {
         return mText;
     }
+
 
 }
