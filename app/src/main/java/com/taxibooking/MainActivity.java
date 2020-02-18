@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        for (int i = 0; i <=5 ; i++) {
+            navigationView.getMenu().getItem(i).setActionView(R.layout.menu_image_right);
+        }
+
     }
 
      /*   @Override

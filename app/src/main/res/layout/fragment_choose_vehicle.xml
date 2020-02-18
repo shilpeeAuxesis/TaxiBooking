@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.choose_destination.ChooseVehicleFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnConfirmVehicle"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnConfirmVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="CONFIRM VEHICLE"
+        android:textAllCaps="true"
+        android:textColor="@color/colorGray_1"
+        android:textSize="@dimen/_10sdp"
+       android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -83,7 +83,7 @@
                             android:paddingLeft="@dimen/_8sdp"
                             android:singleLine="true"
                             android:textColor="@color/colorGray_1"
-                            android:textColorHint="@color/colorGray_hint"
+                            android:textColorHint="@color/colorGray_5"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -98,7 +98,7 @@
                             android:paddingLeft="@dimen/_8sdp"
                             android:singleLine="true"
                             android:textColor="@color/colorGray_1"
-                            android:textColorHint="@color/colorGray_hint"
+                            android:textColorHint="@color/colorGray_5"
                             android:textSize="@dimen/_12sdp" />
 
                         <EditText
@@ -113,7 +113,7 @@
                             android:paddingLeft="@dimen/_8sdp"
                             android:singleLine="true"
                             android:textColor="@color/colorGray_1"
-                            android:textColorHint="@color/colorGray_hint"
+                            android:textColorHint="@color/colorGray_5"
                             android:textSize="@dimen/_12sdp" />
 
 
@@ -129,7 +129,7 @@
                             android:paddingLeft="@dimen/_8sdp"
                             android:singleLine="true"
                             android:textColor="@color/colorGray_1"
-                            android:textColorHint="@color/colorGray_hint"
+                            android:textColorHint="@color/colorGray_5"
                             android:textSize="@dimen/_12sdp" />
 
                         <Button

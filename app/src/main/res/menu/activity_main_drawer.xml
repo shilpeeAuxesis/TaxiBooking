@@ -6,7 +6,8 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_confirm_location"
-            android:icon="@drawable/ic_menu_gallery"
+            android:checked="true"
+            android:icon="@drawable/side_home"
             android:title="@string/menu_confirm_location" />
         <item
             android:id="@+id/nav_choose_destination"
@@ -14,16 +15,17 @@
             android:title="@string/menu__choose_destination" />
         <item
             android:id="@+id/nav_history"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/side_help"
             android:title="@string/menu_history" />
         <item
             android:id="@+id/nav_rating"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/side_star"
             android:title="@string/menu_rating" />
         <item
             android:id="@+id/nav_faq"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/side_faqs"
             android:title="@string/menu_faq" />
+
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_menu_gallery"
