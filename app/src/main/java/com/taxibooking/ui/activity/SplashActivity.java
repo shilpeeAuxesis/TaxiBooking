@@ -1,5 +1,4 @@
 package com.taxibooking.ui.activity;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
@@ -10,14 +9,15 @@ import com.taxibooking.R;
 import static com.taxibooking.ui.constant.Utils.isInternetConnected;
 
 public class SplashActivity extends AppCompatActivity {
-    private static final String TAG = "SplashActivity";
+   // private static final String TAG = "SplashActivity";
+    private  String TAG = SplashActivity.this.getClass().getSimpleName();
     private static int SPLASH_SCREEN_TIME_OUT = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        //
+
         initUI();
     }
 

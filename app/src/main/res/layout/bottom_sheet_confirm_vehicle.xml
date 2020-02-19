@@ -212,10 +212,9 @@
                 </RelativeLayout>
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
                     android:background="@drawable/ic_more_vert" />
-
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -320,11 +319,11 @@
                 android:id="@+id/btnCancelBooking"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:background="@color/colorGray_1"
                 android:fontFamily="@font/roboto_bold"
-                android:text="CANCEL BOOKING"
                 android:gravity="center"
-                android:layout_gravity="center"
+                android:text="CANCEL BOOKING"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/_10sdp" />
@@ -344,13 +343,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:background="@color/yellow"
                 android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
                 android:text="CONTINUE TO PAYMENT"
                 android:textAllCaps="true"
                 android:textColor="@color/colorGray_1"
                 android:textSize="@dimen/_10sdp" />
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

@@ -4,7 +4,6 @@
     <color name="colorPrimary">#FFD51D</color><!--For Tool bar-->
     <color name="colorPrimaryDark">#b79200</color><!--For Status bar-->
     <color name="colorAccent">#050320</color> <!--For icon color-->
-
     <color name="yellow">#FFD51D</color>
     <color name="colorWhite">#FFFFFF</color>
 
