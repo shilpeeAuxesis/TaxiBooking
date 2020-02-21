@@ -42,6 +42,15 @@
         android:id="@+id/chooseVehicleFragment"
         android:name="com.taxibooking.ui.choose_destination.ChooseVehicleFragment"
         android:label="Select Vehicle"
-        tools:layout="@layout/fragment_choose_vehicle" />
+        tools:layout="@layout/fragment_choose_vehicle" >
+        <action
+            android:id="@+id/action_chooseVehicleFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.taxibooking.ui.choose_destination.PaymentFragment"
+        android:label="Payment Method"
+        tools:layout="@layout/fragment_payment" />
 
 </navigation>

@@ -330,7 +330,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lLayCoupon"
+            android:id="@+id/lLayPayment"
             android:layout_width="0dp"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginLeft="@dimen/_3sdp"

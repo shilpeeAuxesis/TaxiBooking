@@ -25,7 +25,7 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.MyHolder
     Context mContext;
     Activity mActivity;
     BottomSheetDialog dialog_1;
-    LinearLayout lLayCancelBooking;
+    LinearLayout lLayCancelBooking,lLayPayment;
 
     public VehicleAdapter(Context mContext, Activity mActivity, List<VehicleModel> arrayList) {
         this.mContext = mContext;
@@ -71,39 +71,21 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.MyHolder
         dialog_1 = new BottomSheetDialog(mActivity);
         dialog_1.setContentView(view);
         lLayCancelBooking =dialog_1.findViewById(R.id.lLayCancelBooking);
+        lLayPayment =dialog_1.findViewById(R.id.lLayPayment);
         lLayCancelBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(mContext, "Cancelled", Toast.LENGTH_SHORT).show();
                 NavController navController = Navigation.findNavController(mActivity, R.id.nav_host_fragment);
                 navController.navigateUp();
                 dialog_1.dismiss();
-                //navController.navigateUp(R.id.action_nav_choose_destination_to_chooseVehicleFragment);
             }
         });
 
-      /*  lLayPayment = dialog_1.findViewById(R.id.lLayPayment);
-        lLayCoupon = dialog_1.findViewById(R.id.lLayCoupon);
-        btnChooseVehicle = dialog_1.findViewById(R.id.btnChooseVehicle);
-        *//*lLayRemove = dialog_1.findViewById(R.id.lLayRemove);
-        btnCancel = dialog_1.findViewById(R.id.btnCancel);
-     *//*
-        lLayCoupon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "Coming Soon", Toast.LENGTH_SHORT).show();
-            }
+        lLayPayment.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(mActivity, R.id.nav_host_fragment);
+            navController.navigate(R.id.action_chooseVehicleFragment_to_paymentFragment);
+            dialog_1.dismiss();
         });
-
-        btnChooseVehicle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                navController.navigate(R.id.action_nav_choose_destination_to_chooseVehicleFragment);
-                dialog_1.dismiss();
-            }
-        });
-       */
         dialog_1.show();
     }
 
