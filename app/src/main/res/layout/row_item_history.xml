@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_5sdp"
+    android:padding="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tvNavigationFrom"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/roboto_medium"
+            android:src="@drawable/ic_navigation"
+            android:textColor="@color/colorGray_1"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvNavigationFrom"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="8A, downtown , new jarsey"
+            android:textColor="@color/colorGray_1"
+            android:textSize="@dimen/_12sdp"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="May 03,2018"
+            android:textColor="@color/colorGray_1"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/ic_more_vert" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tvNavigationTo"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_navigation"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/colorGray_1"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvNavigationTo"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="90B, Kings Plazzac, San franisco"
+            android:textColor="@color/colorGray_1"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvStat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="STATUS:"
+            android:textColor="@color/colorGray_1"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_toRightOf="@+id/tvStat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/colorGray_3"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/colorGray_6"/>
+</LinearLayout>

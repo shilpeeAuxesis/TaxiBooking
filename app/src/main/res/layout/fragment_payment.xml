@@ -88,7 +88,6 @@
 
                             </LinearLayout>
 
-
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -103,7 +102,6 @@
                                     android:textColor="@color/colorWhite"
                                     android:textSize="@dimen/_12sdp" />
                             </LinearLayout>
-
 
                             <LinearLayout
                                 android:layout_width="0dp"
@@ -174,17 +172,9 @@
 
                         </RelativeLayout>
 
-                        <!-- <TextView
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:fontFamily="@font/roboto_bold"
-                             android:text="Name Surname"
-                             android:textColor="@color/colorWhite"
-                             android:textSize="@dimen/_14sdp" />
- -->
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -232,7 +222,6 @@
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -271,7 +260,6 @@
                             android:src="@drawable/ic_navigate_next_gray" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
-
 
                 <TextView
                     android:layout_width="wrap_content"
