@@ -20,13 +20,15 @@ public class RatingFragment extends Fragment {
         ratingViewModel = ViewModelProviders.of(this).get(RatingViewModel.class);
 
         View root = inflater.inflate(R.layout.fragment_rating, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
+
+        /*final TextView textView = root.findViewById(R.id.text_tools);
         ratingViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
+         */
 
         return root;
     }

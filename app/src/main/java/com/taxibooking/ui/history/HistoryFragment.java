@@ -26,6 +26,7 @@ public class HistoryFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_history, container, false);
         recyclerViewHistory =root.findViewById(R.id.recyclerViewHistory);
         list.clear();
+
         for (int i = 0; i <5 ; i++) {
             HistoryModel model =new HistoryModel();
             model.setStatus("Confirmed");
@@ -42,3 +43,5 @@ public class HistoryFragment extends Fragment {
         return root;
     }
 }
+
+

@@ -2,18 +2,107 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
-    <TextView
+    <RelativeLayout
         android:id="@+id/text_tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBoy"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_above="@+id/rLayout"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/boy" />
+
+        <RelativeLayout
+            android:id="@+id/rLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="Stafhen Fleming"
+                    android:textColor="@color/colorGray_1"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Los Florida USA"
+                    android:textColor="@color/colorGray_5"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvRateMess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLocation"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="Rate your riding experience ?"
+                    android:textColor="@color/colorGray_1"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/tvFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvRateMess"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Your feedback will help to improve our driving experience"
+                    android:textColor="@color/colorGray_4"
+                    android:textSize="@dimen/_10sdp" />
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_below="@+id/tvFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/custom_bg_yellow"
+                    android:fontFamily="@font/roboto"
+                    android:hint="Write your comments"
+                    android:gravity="top|left"
+                    android:cursorVisible="false"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/_5sdp"
+                    android:lines="20"
+                    android:textColor="@color/colorGray_1"
+                    android:textColorHint="@color/colorGray_4"
+                    android:textSize="@dimen/_10sdp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
