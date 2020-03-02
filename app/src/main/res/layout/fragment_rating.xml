@@ -14,13 +14,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/ivBy"
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_60sdp"
             android:layout_above="@+id/rLayout"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/boy" />
+            android:src="@drawable/boy"
+            android:visibility="gone" />
 
         <RelativeLayout
             android:id="@+id/rLayout"
@@ -36,9 +36,9 @@
                 android:src="@drawable/boy" />
 
             <RelativeLayout
-                android:layout_below="@+id/ivBoy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/ivBoy"
                 android:layout_margin="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:background="@color/colorWhite"
@@ -132,10 +132,9 @@
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/_12sdp" />
+
             </RelativeLayout>
-
         </RelativeLayout>
-
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

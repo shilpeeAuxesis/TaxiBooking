@@ -21,8 +21,6 @@ public class RatingFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_rating, container, false);
 
-
-        
         /*final TextView textView = root.findViewById(R.id.text_tools);
         ratingViewModel.getText().observe(this, new Observer<String>() {
             @Override
@@ -31,7 +29,6 @@ public class RatingFragment extends Fragment {
             }
         });
          */
-
 
         return root;
     }

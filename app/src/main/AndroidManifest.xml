@@ -35,6 +35,7 @@
         <activity android:name=".ui.activity.SignIn" />
         <activity android:name=".ui.activity.WelcomeActivity" />
         <activity android:name=".ui.activity.LoginActivity" />
+
         <activity
             android:name=".ui.activity.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
