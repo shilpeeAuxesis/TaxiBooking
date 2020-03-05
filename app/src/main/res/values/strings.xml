@@ -9,6 +9,7 @@
     <string name="menu_confirm_location">Confirm Location</string>
     <string name="menu__choose_destination">Choose Destination</string>
     <string name="menu_history">History</string>
+    <string name="menu_profile">Profile</string>
     <string name="menu_rating">Rating</string>
     <string name="menu_faq">FAQ</string>
     <string name="menu_logout">LogOut</string>

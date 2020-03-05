@@ -34,12 +34,14 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout =findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(vp);
     }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new LoginFragment(), "Login");
         adapter.addFragment(new RegisterFragment(), "Register");
         viewPager.setAdapter(adapter);
     }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();

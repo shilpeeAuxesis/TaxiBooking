@@ -13,14 +13,14 @@
         android:fontFamily="@font/roboto_bold"
         android:text=""
         android:textColor="@color/colorGray_1"
-        android:textSize="@dimen/_18sdp"  />
+        android:textSize="@dimen/_14sdp"  />
 
     <TextView
         android:id="@+id/tvContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/roboto"
         android:text=""
         android:textColor="@color/colorGray_3"
         android:textSize="@dimen/_12sdp"  />
