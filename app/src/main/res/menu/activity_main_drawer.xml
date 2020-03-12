@@ -9,12 +9,10 @@
             android:checked="true"
             android:icon="@drawable/confirm_location"
             android:title="@string/menu_confirm_location" />
-
         <item
             android:id="@+id/nav_choose_destination"
             android:icon="@drawable/choose_designation"
             android:title="@string/menu__choose_destination" />
-
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/history"
