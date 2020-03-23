@@ -12,10 +12,12 @@ import com.google.android.material.tabs.TabLayout;
 import com.taxibooking.R;
 import com.taxibooking.ui.login.LoginFragment;
 import com.taxibooking.ui.register.RegisterFragment;
+import com.taxibooking.ui.register.SomeDisplay;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements SomeDisplay {
     private static final String TAG = "LoginActivity";
     boolean doubleBackToExitPressedOnce = false;
     private TabLayout tabLayout;
@@ -40,6 +42,11 @@ public class LoginActivity extends AppCompatActivity {
         adapter.addFragment(new LoginFragment(), "Login");
         adapter.addFragment(new RegisterFragment(), "Register");
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    public void onDisplay() {
+        vp.setCurrentItem(0, true);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

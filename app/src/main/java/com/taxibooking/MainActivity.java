@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView.setItemIconTintList(null);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_confirm_location, R.id.nav_choose_destination, R.id.nav_history,R.id.nav_profile,
+                R.id.nav_confirm_location, R.id.nav_choose_destination, R.id.nav_history, R.id.nav_profile,
                 R.id.nav_rating, R.id.nav_faq, R.id.nav_logout)
                 .setDrawerLayout(drawer)
                 .build();
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        for (int i = 0; i <=6; i++) {
+        for (int i = 0; i <= 6; i++) {
             navigationView.getMenu().getItem(i).setActionView(R.layout.menu_image_right);
         }
     }
@@ -57,10 +57,9 @@ public class MainActivity extends AppCompatActivity {
         return true;
        } */
 
-     @Override
+    @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
     }
-
-     }
+}

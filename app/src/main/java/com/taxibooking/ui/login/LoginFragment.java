@@ -8,13 +8,25 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.taxibooking.R;
 import com.taxibooking.ui.activity.AfterLoginActivity;
+import com.taxibooking.ui.register.resister_model.RegisterModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginFragment extends Fragment {
     private static final String TAG = "LoginFragment";
@@ -22,7 +34,8 @@ public class LoginFragment extends Fragment {
     Button btnLogin;
     EditText edtEmail, edtPassword;
     String error_msg = "";
-
+    private FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+    DatabaseReference mDatabaseReference = null;
     //DatabaseReference myRef;
    // DatabaseReference rootRef, demoRef;
 
@@ -31,11 +44,12 @@ public class LoginFragment extends Fragment {
         View root = inflater.inflate(R.layout.login_fragment, container, false);
         edtEmail = root.findViewById(R.id.edtEmail);
         edtPassword = root.findViewById(R.id.edtPassword);
-
         btnLogin = root.findViewById(R.id.btnLogin);
-
+        //mDatabaseReference = mDatabase.getReference();
         btnLogin.setOnClickListener(v -> {
-            startActivity(new Intent(getActivity(), AfterLoginActivity.class));
+            getLogin();
+
+          //  startActivity(new Intent(getActivity(), AfterLoginActivity.class));
         });
        /* //database reference pointing to root of database
         rootRef = FirebaseDatabase.getInstance().getReference();
@@ -77,8 +91,31 @@ public class LoginFragment extends Fragment {
         return root;
     }
 
+    private void getLogin() {
+        mDatabaseReference = mDatabase.getReference().child("data");
+        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<RegisterModel> adsList = new ArrayList<RegisterModel>();
+                for (DataSnapshot adSnapshot: dataSnapshot.getChildren()) {
+                    adsList.add(adSnapshot.getValue(RegisterModel.class));
+                }
+                Log.d(TAG, "no of records of the search is "+adsList.size());
+                Log.d(TAG, "no of records of the search is "+adsList.get(0).getEmail());
+                /* model =dataSnapshot.getValue(RegisterModel.class);
+                model.getEmail();*/
+                //Log.d(TAG, "onDataChange: "+model.getEmail());
+            }
 
-   /* private void getLogin() {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+    /* private void getLogin() {
        *//* String email =edtEmail.getText().toString().trim();
         String mPassword =edtPassword.getText().toString().trim();*//*
 

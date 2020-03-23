@@ -92,19 +92,6 @@ public class Utils {
         return true;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     /*public static boolean checkRequestPermiss(Context mContext, Activity mActivity) {
         int cameraPer = ContextCompat.checkSelfPermission(mContext, Manifest.permission.CAMERA);
         int writePer = ContextCompat.checkSelfPermission(mContext, Manifest.permission.WRITE_EXTERNAL_STORAGE);
