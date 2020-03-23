@@ -1,8 +1,11 @@
 package com.taxibooking.ui.register;
+
 import android.app.Activity;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,8 +22,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.taxibooking.R;
 import com.taxibooking.ui.register.resister_model.RegisterModel;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import static com.taxibooking.ui.constant.Utils.isInternetConnected;
 
 public class RegisterFragment extends Fragment {
@@ -30,6 +36,7 @@ public class RegisterFragment extends Fragment {
     String error_msg = "";
     DatabaseReference mDatabaseReference = null;
     SomeDisplay mDisplay = null;
+    boolean isExitsData = false;
 
     @Override
     public void onAttach(Activity activity) {
@@ -62,39 +69,38 @@ public class RegisterFragment extends Fragment {
                 if (isInternetConnected(getActivity())) {
                     if (Validation()) {
                         if (edtPassword.getText().toString().trim().equals(edtRepeatPass.getText().toString().trim())) {
-                            if (mDatabaseReference!=null) {
+                            if (mDatabaseReference != null) {
                                 mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                         List<RegisterModel> adsList = new ArrayList<RegisterModel>();
-                                        for (DataSnapshot adSnapshot: dataSnapshot.getChildren()) {
-
-                                            if (adSnapshot.child("name").exists()) {
-                                                if (edtEmail.getText().toString().trim().equals(adSnapshot.child("name").getValue())){
-
-                                                }else {
-
+                                        for (DataSnapshot adSnapshot : dataSnapshot.getChildren()) {
+                                            if (adSnapshot.exists()) {
+                                                if (edtEmail.getText().toString().trim().equals(adSnapshot.child("email").getValue())) {
+                                                    //do ur stuff
+                                                    isExitsData = true;
+                                                    break;
+                                                } else {
+                                                    isExitsData = false;
+                                                    //do something if not exists
                                                 }
-                                                Log.d(TAG, "onDataChange: "+adSnapshot.child("name").getValue());
-
-
-
-                                                //do ur stuff
-                                            } else {
-                                                //do something if not exists
                                             }
-                                            adsList.add(adSnapshot.getValue(RegisterModel.class));
                                         }
-                                        Log.d(TAG, "no of records of the search is "+adsList.size());
-                                        Log.d(TAG, "no of records of the search is "+adsList.get(0).getEmail());
+                                        if (isExitsData){
+                                            Toast.makeText(getActivity(), getResources().getString(R.string.register_already), Toast.LENGTH_SHORT).show();
+                                        }else {
+                                            getRegister();
+                                        }
+                                       /* Log.d(TAG, "no of records of the search is "+adsList.size());
+                                        Log.d(TAG, "no of records of the search is "+adsList.get(0).getEmail());*/
                                     }
+
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError databaseError) {
-                                       // Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                                        // Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
                                         Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                                     }
                                 });
-                                getRegister();
                             }
                         } else {
                             Toast.makeText(getActivity(), "Password and repeat password must be same", Toast.LENGTH_SHORT).show();
@@ -121,7 +127,7 @@ public class RegisterFragment extends Fragment {
         edtPassword.setText("");
         edtRepeatPass.setText("");
         Toast.makeText(getActivity(), getResources().getString(R.string.register_succ), Toast.LENGTH_SHORT).show();
-        mDisplay.onDisplay();
+      //  mDisplay.onDisplay();
     }
 
     private boolean Validation() {

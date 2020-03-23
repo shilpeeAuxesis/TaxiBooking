@@ -27,6 +27,7 @@
     <string name="hint_password">Please enter your password</string>
     <string name="hint_repassword">Please enter your repeat password</string>
     <string name="register_succ">User registered Successfully...</string>
+    <string name="register_already">This email is already registered...</string>
 
 
     <string name="enter_email">Please enter your E-mail</string>
